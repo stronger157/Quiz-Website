@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Website</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz Game</h1>
+        
+        <!-- Category Selection -->
+        <div class="category-selection">
+            <h2>Select Your Category</h2>
+            <div class="category-buttons">
+                <button class="category-btn" onclick="toggleSubcategories('study')">
+                    <span class="category-name">Study</span>
+                </button>
+                <button class="category-btn" onclick="toggleSubcategories('Mental-health')">
+                    <span class="category-name">Mental-health</span>
+                </button>
+                <button class="category-btn" onclick="toggleSubcategories('Fun & Learn')">
+                    <span class="category-name">Fun & Learn</span>
+                </button>
+                <button class="category-btn" onclick="toggleSubcategories('Puzzle')">
+                    <span class="category-name">Puzzle</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Subcategory Selection (hidden initially) -->
+        <div class="subcategory-selection" id="study" style="display: none;">
+            <h3>Select a Subcategory</h3>
+            <div class="subcategory-buttons">
+                <button class="subcategory-btn" onclick="startQuiz('Physics')">Physics</button>
+                <button class="subcategory-btn" onclick="startQuiz('Chemistry')">Chemistry</button>
+                <button class="subcategory-btn" onclick="startQuiz('Mathematics')">Mathematics</button>
+            </div>
+        </div>
+
+        <div class="subcategory-selection" id="Mental-health" style="display: none;">
+            <h3>Select a Subcategory</h3>
+            <div class="subcategory-buttons">
+                <button class="subcategory-btn" onclick="startQuiz('Self-awareness')">self-awareness</button>
+             <!--  <button class="subcategory-btn" onclick="startQuiz('therapy')">therapy</button>
+                <button class="subcategory-btn" onclick="startQuiz('Psychology')">Psychology</button>-->
+            </div>
+        </div>
+       
+
+        <div class="subcategory-selection" id="Fun & Learn" style="display: none;">
+            <h3>Select a Subcategory</h3>
+            <div class="subcategory-buttons">
+                <button class="subcategory-btn" onclick="startQuiz('Coding Riddle')">Codeing Riddle</button>
+               <!-- <button class="subcategory-btn" onclick="startQuiz('commerce')">Commerce</button>
+                <button class="subcategory-btn" onclick="startQuiz('arts')">Arts</button>  -->
+            </div>
+        </div>
+
+        <!-- Puzzle Subcategory -->
+        <div class="subcategory-selection" id="Puzzle" style="display: none;">
+            <h3>Select a Subcategory</h3>
+            <div class="subcategory-buttons">
+                <button class="subcategory-btn" onclick="startQuiz('Riddle')">Riddle</button>
+                <button class="subcategory-btn" onclick="startQuiz('Logic')">Logic</button>
+                <button class="subcategory-btn" onclick="startQuiz('Visual')">Visual & Counting</button>
+            </div>
+        </div>
+        
+        <div class="qout">
+           <h3>"It is a happy talent to know how to play."</h3>
+        </div>
+
+        <!-- Quiz Content -->
+        <div class="quiz" style="display: none;">
+            <h2>Quiz</h2>
+            <div id="question-container">
+                <!-- Questions will be inserted here dynamically -->
+            </div>
+            <button id="next-btn" onclick="nextQuestion()" style="display: none;">Next</button>
+            <p id="score" style="display: none;"></p>
+        </div>
+
+        <!-- Leaderboard -->
+        <div class="leaderboard" style="display: none;">
+            <h2>Leaderboard</h2>
+            <ul id="leaderboard-list">
+                <!-- Leaderboard content will be dynamically generated -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="js2.js"></script>
+</body>
+</html>

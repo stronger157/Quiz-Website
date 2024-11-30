@@ -1,0 +1,237 @@
+*{
+    background-image: url();
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #b788ac;
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+/* Category Selection */
+.category-selection {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 45px;
+}
+
+.category-selection h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.category-btn {
+    background-color: rgb(146, 157, 157);
+    color: red;
+    font-weight: 1000;
+    font-size: 20px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+    width: 250px;
+    margin: 10px;
+}
+
+.category-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 123, 255, 0.5);
+}
+
+.category-btn:active {
+    background-color: #00408f;
+    transform: translateY(0);
+}
+
+/* Subcategory Selection */
+.subcategory-selection {
+    display: none;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.subcategory-selection h3 {
+    font-size: 40px;
+    font-weight: bolder;
+    margin-bottom: 30px;
+    color: #333;
+    animation: fadeIn 1s ease-in-out;
+    
+}
+
+.subcategory-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.subcategory-btn {
+    background-color: #28a745;
+    color: white;
+    font-size: 22px;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 250px;
+    margin: 10px;
+    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+}
+
+.subcategory-btn:hover {
+    background-color: #e911a1;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(93, 143, 18, 0.5);
+}
+
+.subcategory-btn:active {
+    background-color: #1e7e34;
+    transform: translateY(0);
+}
+
+
+.qout {
+    position: absolute bottom;
+    display: flex;
+    
+    justify-content: center; /* Horizontal alignment */
+    align-items: flex-end;  /* Aligns items at the bottom */
+    height: 50px;          /* Set a height for the container */
+    border: 1px solid #000;
+    margin-top: 200px; 
+    background-color: #dee2e6;/* Optional for visibility */
+  }
+  
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Quiz Section */
+.quiz {
+    display: none;
+    background-color: #b194a7;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#question-container {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+button.option-btn {
+    background-color: #f8f9fa;
+    color: #495057;
+    font-size: 18px;
+    padding: 12px 25px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 8px;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.option-btn:hover {
+    background-color: #e9ecef;
+    transform: scale(1.05);
+}
+
+button.option-btn:active {
+    background-color: #dee2e6;
+    transform: scale(1);
+}
+
+#next-btn {
+    background-color: #007BFF;
+    color: white;
+    font-size: 20px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+}
+
+#next-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+#next-btn:active {
+    background-color: #00408f;
+    transform: scale(1);
+}
+
+#score {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 300px;
+}
+
+/* Leaderboard Section */
+.leaderboard {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#leaderboard-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#leaderboard-list li {
+    font-size: 20px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    margin: 5px 0;
+    border-radius: 8px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .category-buttons,
+    .subcategory-buttons {
+        flex-direction: column;
+    }
+
+    .category-btn,
+    .subcategory-btn {
+        width: 90%;
+    }
+}
